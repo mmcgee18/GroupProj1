@@ -1,8 +1,19 @@
+:root{ 
+    --pumpkin:#FF7518; 
+    --witch-purple:#4B0082; 
+    --monster-green:#228B22; 
+    --black:#000; 
+    --ghost:#FFF; 
+    --space-1:0.25rem; 
+    --space-2:0.5rem; 
+    --space-3:1rem; 
+    --space-4:2rem; 
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
 }
 
 h1 {
@@ -32,19 +43,16 @@ tr:hover {
     background-color: #f9f9f9;
 }
 
-:root{ --pumpkin:#FF7518; --witch-purple:#4B0082; --monster-green:#228B22; --black:#000; 
---ghost:#FFF; --space-1:0.25rem; --space-2:0.5rem; --space-3:1rem; --space-4:2rem; 
-}
-
-html { scroll-behavior: smooth; } 
-
-@media (prefers-reduced-motion: reduce){ 
-* { animation-duration:0.01ms !important; 
-animation-iteration-count:1 !important; 
-transition:none !important; } 
+html { 
+    scroll-behavior: smooth; 
 } 
 
-header { position: sticky; top: 0; background: var(--black); color: var(--ghost); } 
+header { 
+    position: sticky; 
+    top: 0; 
+    background-color: var(--witch-purple); 
+    color: var(--monster-green); 
+} 
 
 nav a { 
 display:inline-block; padding: var(--space-2) var(--space-3); 
@@ -53,6 +61,7 @@ transition: transform .2s, color .2s;
 
 nav a:focus, nav a:hover { color: var(--pumpkin); transform: translateY(-2px); } 
 
+/* Section Nav */
 /* Each story page is a section with an id; only the :target is visible */ 
 .page { display: none; } 
 
@@ -63,6 +72,14 @@ color: var(--ghost);
 background: var(--witch-purple); 
 padding: .5rem 1rem; border-radius: .5rem; 
 } 
+
+.pager {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+/* ------- */
 
 .ghost { 
 opacity: 0; transform: translateY(10px); 
