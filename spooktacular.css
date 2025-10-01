@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -30,4 +34,41 @@ th {
 
 tr:hover {
     background-color: #f9f9f9;
+}
+
+header {
+    position: sticky;
+    font: Chiller;
+    top: 0;
+    background-color: var(--pumpkin);
+}
+
+footer {
+    font: Eater;
+    background-color: var(--monster-green);
+}
+
+.page {
+    display: none;
+}
+
+.page:target {
+    display: block;
+}
+
+:root {
+    --pumpkin:#FF7518;
+    --witch-purple:#4B0082;
+    --monster-green:#228B22;
+    --black:#000; 
+    --ghost:#FFF; 
+    --space-1:0.25rem; 
+    --space-2:0.5rem; 
+    --space-3:1rem; 
+    --space-4:2rem; 
+}
+
+nav a {
+    display: inline-block;
+    padding: var(--space-3) var(--space-4);
 }
