@@ -1,13 +1,25 @@
+:root{ 
+    --pumpkin:#FF7518; 
+    --witch-purple:#4B0082; 
+    --monster-green:#228B22; 
+    --black:#000; 
+    --ghost:#FFF; 
+    --space-1:0.25rem; 
+    --space-2:0.5rem; 
+    --space-3:1rem; 
+    --space-4:2rem; 
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
 }
 
 h1 {
     text-align: center;
     margin-top: 20px;
+    color: var(--witch-purple);
 }
 
 table {
@@ -30,4 +42,48 @@ th {
 
 tr:hover {
     background-color: #f9f9f9;
+}
+
+html { 
+    scroll-behavior: smooth; 
+} 
+
+header { position: sticky; top: 0; background: var(--black); color: var(--ghost); } 
+
+nav a { 
+display:inline-block; padding: var(--space-2) var(--space-3); 
+transition: transform .2s, color .2s; 
+} 
+
+nav a:focus, nav a:hover { color: var(--pumpkin); transform: translateY(-2px); } 
+
+/* Section Nav */
+/* Each story page is a section with an id; only the :target is visible */ 
+.page { display: none; } 
+
+.page:target { display: block; } 
+
+.pager a { 
+color: var(--ghost); 
+background: var(--witch-purple); 
+padding: .5rem 1rem; border-radius: .5rem; 
+} 
+
+.pager {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    background-color: var(--pumpkin);
+}
+
+@keyframes morph { 
+0% { filter: hue-rotate(0); transform: scale(1); } 
+50%{ filter: hue-rotate(45deg); transform: scale(1.05); } 
+100%{ filter: hue-rotate(0); transform: scale(1); } 
+} 
+.werewolf:hover { animation: morph 1.6s ease-in-out infinite; }
+
+#bats {
+    color: var(--monster-green);
 }
