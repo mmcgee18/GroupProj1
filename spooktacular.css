@@ -76,3 +76,9 @@ padding: .5rem 1rem; border-radius: .5rem;
     gap: 1rem;
     margin-top: 2rem;
 }
+
+#Halloween {
+    text-align: center;
+    color: var(--pumpkin);
+    font: 15pt Noisefer;
+}
