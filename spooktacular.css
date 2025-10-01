@@ -10,6 +10,7 @@ body {
 }
 
 h1 {
+    font-family: Butcherman;
     text-align: center;
     margin-top: 20px;
 }
@@ -48,7 +49,7 @@ animation-iteration-count:1 !important;
 transition:none !important; } 
 } 
 
-header { position: sticky; top: 0; background: var(--black); color: var(--ghost); } 
+header { position: sticky; top: 0; background: var(--black); color: var(--ghost); font-family: Chiller;} 
 
 nav a { 
 display:inline-block; padding: var(--space-2) var(--space-3); 
